@@ -11,6 +11,14 @@
 		0EA1A0A11EAF7322003C6612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA1A09F1EAF7322003C6612 /* Main.storyboard */; };
 		0EA1A0A31EAF7322003C6612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA1A0A21EAF7322003C6612 /* Assets.xcassets */; };
 		0EA1A0A61EAF7322003C6612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA1A0A41EAF7322003C6612 /* LaunchScreen.storyboard */; };
+		0EA1A0BE1EAF7F30003C6612 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0BC1EAF7F30003C6612 /* MainViewController.swift */; };
+		0EA1A0C01EAF7F5A003C6612 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0BF1EAF7F5A003C6612 /* BLEController.swift */; };
+		0EA1A0C21EAF7F65003C6612 /* HRMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0C11EAF7F65003C6612 /* HRMController.swift */; };
+		0EA1A0C51EAF8555003C6612 /* TabbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0C41EAF8555003C6612 /* TabbedViewController.swift */; };
+		0EA1A0C71EAF85A9003C6612 /* ConfigurationTabbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0C61EAF85A9003C6612 /* ConfigurationTabbedViewController.swift */; };
+		0EA1A0C91EAF85B6003C6612 /* ReadingsTabbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0C81EAF85B6003C6612 /* ReadingsTabbedViewController.swift */; };
+		0EA1A0CB1EAF8BF2003C6612 /* BLEControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0CA1EAF8BF2003C6612 /* BLEControllerDelegate.swift */; };
+		0EA1A0CD1EAF8C72003C6612 /* HRMControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A0CC1EAF8C72003C6612 /* HRMControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		0EA1A0A21EAF7322003C6612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA1A0A51EAF7322003C6612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EA1A0A71EAF7322003C6612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EA1A0BC1EAF7F30003C6612 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0EA1A0BF1EAF7F5A003C6612 /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		0EA1A0C11EAF7F65003C6612 /* HRMController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMController.swift; sourceTree = "<group>"; };
+		0EA1A0C41EAF8555003C6612 /* TabbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedViewController.swift; sourceTree = "<group>"; };
+		0EA1A0C61EAF85A9003C6612 /* ConfigurationTabbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTabbedViewController.swift; sourceTree = "<group>"; };
+		0EA1A0C81EAF85B6003C6612 /* ReadingsTabbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingsTabbedViewController.swift; sourceTree = "<group>"; };
+		0EA1A0CA1EAF8BF2003C6612 /* BLEControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEControllerDelegate.swift; sourceTree = "<group>"; };
+		0EA1A0CC1EAF8C72003C6612 /* HRMControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +68,85 @@
 		0EA1A09A1EAF7322003C6612 /* MyHeartMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				0EA1A0B61EAF7F30003C6612 /* Classes */,
 				0EA1A09B1EAF7322003C6612 /* AppDelegate.swift */,
 				0EA1A09F1EAF7322003C6612 /* Main.storyboard */,
-				0EA1A0A21EAF7322003C6612 /* Assets.xcassets */,
 				0EA1A0A41EAF7322003C6612 /* LaunchScreen.storyboard */,
+				0EA1A0A21EAF7322003C6612 /* Assets.xcassets */,
 				0EA1A0A71EAF7322003C6612 /* Info.plist */,
 			);
 			path = MyHeartMonitor;
+			sourceTree = "<group>";
+		};
+		0EA1A0B61EAF7F30003C6612 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0B71EAF7F30003C6612 /* BLEController */,
+				0EA1A0B81EAF7F30003C6612 /* HRMController */,
+				0EA1A0B91EAF7F30003C6612 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0EA1A0B71EAF7F30003C6612 /* BLEController */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0BF1EAF7F5A003C6612 /* BLEController.swift */,
+				0EA1A0CA1EAF8BF2003C6612 /* BLEControllerDelegate.swift */,
+			);
+			path = BLEController;
+			sourceTree = "<group>";
+		};
+		0EA1A0B81EAF7F30003C6612 /* HRMController */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0C11EAF7F65003C6612 /* HRMController.swift */,
+				0EA1A0CC1EAF8C72003C6612 /* HRMControllerDelegate.swift */,
+			);
+			path = HRMController;
+			sourceTree = "<group>";
+		};
+		0EA1A0B91EAF7F30003C6612 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0C31EAF8546003C6612 /* TabbedView */,
+				0EA1A0BB1EAF7F30003C6612 /* MainView */,
+				0EA1A0BA1EAF7F30003C6612 /* ConfigurationView */,
+				0EA1A0BD1EAF7F30003C6612 /* ReadingView */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0EA1A0BA1EAF7F30003C6612 /* ConfigurationView */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0C61EAF85A9003C6612 /* ConfigurationTabbedViewController.swift */,
+			);
+			path = ConfigurationView;
+			sourceTree = "<group>";
+		};
+		0EA1A0BB1EAF7F30003C6612 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0BC1EAF7F30003C6612 /* MainViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		0EA1A0BD1EAF7F30003C6612 /* ReadingView */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0C81EAF85B6003C6612 /* ReadingsTabbedViewController.swift */,
+			);
+			path = ReadingView;
+			sourceTree = "<group>";
+		};
+		0EA1A0C31EAF8546003C6612 /* TabbedView */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1A0C41EAF8555003C6612 /* TabbedViewController.swift */,
+			);
+			path = TabbedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA1A0CB1EAF8BF2003C6612 /* BLEControllerDelegate.swift in Sources */,
+				0EA1A0C51EAF8555003C6612 /* TabbedViewController.swift in Sources */,
 				0EA1A09C1EAF7322003C6612 /* AppDelegate.swift in Sources */,
+				0EA1A0C21EAF7F65003C6612 /* HRMController.swift in Sources */,
+				0EA1A0C71EAF85A9003C6612 /* ConfigurationTabbedViewController.swift in Sources */,
+				0EA1A0C91EAF85B6003C6612 /* ReadingsTabbedViewController.swift in Sources */,
+				0EA1A0BE1EAF7F30003C6612 /* MainViewController.swift in Sources */,
+				0EA1A0CD1EAF8C72003C6612 /* HRMControllerDelegate.swift in Sources */,
+				0EA1A0C01EAF7F5A003C6612 /* BLEController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

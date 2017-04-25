@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kNY-0Z-uQb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pvq-FH-X4z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Monitors-->
+        <!--Configured Monitors-->
         <scene sceneID="no9-38-tfa">
             <objects>
-                <viewController id="zno-do-QDv" sceneMemberID="viewController">
+                <viewController title="Configured Monitors" id="zno-do-QDv" customClass="ConfigurationTabbedViewController" customModule="MyHeartMonitor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rgV-XE-whX"/>
                         <viewControllerLayoutGuide type="bottom" id="tmy-8H-xZ6"/>
@@ -20,18 +22,64 @@
                     <view key="view" contentMode="scaleToFill" id="mjB-ed-hmo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9C-6F-mYP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peripheralCell" textLabel="DXh-pE-PiO" detailTextLabel="Uzm-fL-rOa" style="IBUITableViewCellStyleValue1" id="Kzn-DO-G8s">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kzn-DO-G8s" id="Dkt-VP-T2d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DXh-pE-PiO">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uzm-fL-rOa">
+                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zno-do-QDv" id="9ft-WO-mdm"/>
+                                    <outlet property="delegate" destination="zno-do-QDv" id="DMg-yQ-zbV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.19215884799999999" green="0.18776568769999999" blue="0.2126013041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y9C-6F-mYP" firstAttribute="leading" secondItem="mjB-ed-hmo" secondAttribute="leading" id="9fO-sE-hzv"/>
+                            <constraint firstItem="tmy-8H-xZ6" firstAttribute="top" secondItem="y9C-6F-mYP" secondAttribute="bottom" id="9yU-Em-QiF"/>
+                            <constraint firstItem="y9C-6F-mYP" firstAttribute="top" secondItem="rgV-XE-whX" secondAttribute="bottom" id="sPU-Jt-nTh"/>
+                            <constraint firstAttribute="trailing" secondItem="y9C-6F-mYP" secondAttribute="trailing" id="uu8-W2-mI3"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Monitors" selectedImage="ic_settings_bluetooth_white" id="xWo-Pc-ng2"/>
+                    <tabBarItem key="tabBarItem" title="Monitors" image="ic_settings_bluetooth_white" selectedImage="ic_settings_bluetooth_white" id="xWo-Pc-ng2"/>
+                    <connections>
+                        <outlet property="peripheralsTable" destination="y9C-6F-mYP" id="EQE-wf-U1U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-9s-A6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-699" y="205"/>
+            <point key="canvasLocation" x="-700" y="204.64767616191907"/>
         </scene>
         <!--Readings-->
         <scene sceneID="Qez-DM-qyG">
             <objects>
-                <viewController id="h4w-T9-ko1" sceneMemberID="viewController">
+                <viewController title="Readings" id="h4w-T9-ko1" customClass="ReadingsTabbedViewController" customModule="MyHeartMonitor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E3U-9y-8i4"/>
                         <viewControllerLayoutGuide type="bottom" id="jPO-o5-ux9"/>
@@ -39,36 +87,121 @@
                     <view key="view" contentMode="scaleToFill" id="ypf-SF-QWk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No devices connected!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-dX-fdm">
+                                <rect key="frame" x="86" y="300" width="203.5" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ciY-dX-fdm" secondAttribute="height" multiplier="343:113" id="Ana-Ve-sSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor location:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9E-ia-ifr">
+                                <rect key="frame" x="16" y="568.5" width="132" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.73588360659999996" green="0.92748980240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery level:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-CR-5Fg">
+                                <rect key="frame" x="16" y="587.5" width="105" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.73588360659999996" green="0.92748980240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ih-aV-XHE">
+                                <rect key="frame" x="156" y="587" width="14.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.73588360659999996" green="0.92748980240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsB-6b-T32">
+                                <rect key="frame" x="156" y="568.5" width="14.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.73588360659999996" green="0.92748980240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- bpm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1AZ-46-TdG">
+                                <rect key="frame" x="14" y="433" width="343" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1AZ-46-TdG" secondAttribute="height" multiplier="343:127" id="pfI-lP-gQi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="74"/>
+                                <color key="textColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_animation" translatesAutoresizingMaskIntoConstraints="NO" id="on1-sQ-EfD">
+                                <rect key="frame" x="16" y="123" width="343" height="310"/>
+                                <color key="tintColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="on1-sQ-EfD" secondAttribute="height" multiplier="31:28" id="QKH-fi-tdF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.19215884799999999" green="0.18776568769999999" blue="0.2126013041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3qb-CR-5Fg" firstAttribute="top" secondItem="y9E-ia-ifr" secondAttribute="bottom" constant="-3.5" id="0iI-jj-xuH"/>
+                            <constraint firstItem="8Ih-aV-XHE" firstAttribute="centerY" secondItem="3qb-CR-5Fg" secondAttribute="centerY" id="0mP-Iw-Mqr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="on1-sQ-EfD" secondAttribute="trailing" id="5EJ-WE-5BO"/>
+                            <constraint firstItem="1AZ-46-TdG" firstAttribute="top" secondItem="on1-sQ-EfD" secondAttribute="bottom" id="867-lZ-ibZ"/>
+                            <constraint firstItem="jPO-o5-ux9" firstAttribute="top" secondItem="3qb-CR-5Fg" secondAttribute="bottom" constant="8" id="KDl-if-Mln"/>
+                            <constraint firstItem="y9E-ia-ifr" firstAttribute="top" secondItem="1AZ-46-TdG" secondAttribute="bottom" constant="8.5" id="PKn-DI-crc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3qb-CR-5Fg" secondAttribute="leading" id="X3f-av-Ci4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1AZ-46-TdG" secondAttribute="trailing" constant="2" id="ZvX-EK-w2f"/>
+                            <constraint firstItem="ciY-dX-fdm" firstAttribute="centerY" secondItem="ypf-SF-QWk" secondAttribute="centerY" id="e90-PC-CSb"/>
+                            <constraint firstItem="1AZ-46-TdG" firstAttribute="leading" secondItem="ypf-SF-QWk" secondAttribute="leadingMargin" constant="-2" id="eja-B6-Gb9"/>
+                            <constraint firstItem="on1-sQ-EfD" firstAttribute="leading" secondItem="ypf-SF-QWk" secondAttribute="leadingMargin" id="hMB-d6-2Pg"/>
+                            <constraint firstItem="8Ih-aV-XHE" firstAttribute="leading" secondItem="PsB-6b-T32" secondAttribute="leading" id="heJ-Cm-Gcl"/>
+                            <constraint firstItem="ciY-dX-fdm" firstAttribute="centerX" secondItem="ypf-SF-QWk" secondAttribute="centerX" id="mz8-SM-e2J"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="y9E-ia-ifr" secondAttribute="leading" id="vn4-Rh-wTl"/>
+                            <constraint firstItem="PsB-6b-T32" firstAttribute="leading" secondItem="y9E-ia-ifr" secondAttribute="trailing" constant="8" id="z04-FH-xfL"/>
+                            <constraint firstItem="PsB-6b-T32" firstAttribute="centerY" secondItem="y9E-ia-ifr" secondAttribute="centerY" id="zki-sQ-0AG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Readings" selectedImage="ic_favorite_white" id="F7x-Js-2dX"/>
+                    <tabBarItem key="tabBarItem" title="Readings" image="ic_favorite_white" selectedImage="ic_favorite_white" id="F7x-Js-2dX"/>
+                    <connections>
+                        <outlet property="batteryLevelDataLabel" destination="8Ih-aV-XHE" id="g9p-94-Uci"/>
+                        <outlet property="batteryLevelLabel" destination="3qb-CR-5Fg" id="EcM-xC-ghO"/>
+                        <outlet property="heartRateLabel" destination="1AZ-46-TdG" id="by3-IY-f1e"/>
+                        <outlet property="heartVisualizer" destination="on1-sQ-EfD" id="47B-fg-9D7"/>
+                        <outlet property="noDevicesLabel" destination="ciY-dX-fdm" id="DWz-Y3-Pg9"/>
+                        <outlet property="sensorLocaitonDataLabel" destination="PsB-6b-T32" id="wm2-2B-8gy"/>
+                        <outlet property="sensorLocationLabel" destination="y9E-ia-ifr" id="NLD-MI-6gQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70i-Ea-2vD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-699" y="-450"/>
+            <point key="canvasLocation" x="-700" y="-450.22488755622192"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="I7B-1r-Cid">
+        <!--MyHeart-->
+        <scene sceneID="7cm-If-zBw">
             <objects>
-                <tabBarController id="kNY-0Z-uQb" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="qSA-qs-nxc">
+                <tabBarController title="MyHeart" id="pvq-FH-X4z" customClass="MainViewController" customModule="MyHeartMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XaN-k9-ScB"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Nar-7U-894">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19215884799999999" green="0.18776568769999999" blue="0.2126013041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="h4w-T9-ko1" kind="relationship" relationship="viewControllers" id="zfE-Cs-IOH"/>
-                        <segue destination="zno-do-QDv" kind="relationship" relationship="viewControllers" id="UE7-GX-mQ5"/>
+                        <segue destination="h4w-T9-ko1" kind="relationship" relationship="viewControllers" id="Xn9-F9-rk8"/>
+                        <segue destination="zno-do-QDv" kind="relationship" relationship="viewControllers" id="zri-3k-toU"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Koc-2c-AnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o97-p7-tJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1651" y="-123"/>
+            <point key="canvasLocation" x="-1575" y="-221"/>
         </scene>
     </scenes>
     <resources>
+        <image name="heart_animation" width="300" height="267"/>
         <image name="ic_favorite_white" width="24" height="24"/>
         <image name="ic_settings_bluetooth_white" width="24" height="24"/>
     </resources>
-    <color key="tintColor" red="1" green="0.35285942106200852" blue="0.33187329584039094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="1" green="0.35285942110000001" blue="0.33187329580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
