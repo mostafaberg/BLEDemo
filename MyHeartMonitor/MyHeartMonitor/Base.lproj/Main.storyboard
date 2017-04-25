@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kNY-0Z-uQb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Monitors-->
+        <scene sceneID="no9-38-tfa">
+            <objects>
+                <viewController id="zno-do-QDv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rgV-XE-whX"/>
+                        <viewControllerLayoutGuide type="bottom" id="tmy-8H-xZ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mjB-ed-hmo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.19215884799999999" green="0.18776568769999999" blue="0.2126013041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Monitors" selectedImage="ic_settings_bluetooth_white" id="xWo-Pc-ng2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-9s-A6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-699" y="205"/>
+        </scene>
+        <!--Readings-->
+        <scene sceneID="Qez-DM-qyG">
+            <objects>
+                <viewController id="h4w-T9-ko1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E3U-9y-8i4"/>
+                        <viewControllerLayoutGuide type="bottom" id="jPO-o5-ux9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ypf-SF-QWk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.19215884799999999" green="0.18776568769999999" blue="0.2126013041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Readings" selectedImage="ic_favorite_white" id="F7x-Js-2dX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70i-Ea-2vD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-699" y="-450"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="I7B-1r-Cid">
+            <objects>
+                <tabBarController id="kNY-0Z-uQb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qSA-qs-nxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h4w-T9-ko1" kind="relationship" relationship="viewControllers" id="zfE-Cs-IOH"/>
+                        <segue destination="zno-do-QDv" kind="relationship" relationship="viewControllers" id="UE7-GX-mQ5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Koc-2c-AnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1651" y="-123"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="UWQ-d3-QKd">
+            <objects>
+                <tableViewController id="uqJ-Sq-zz9" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CRh-Xt-dPK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kxu-rg-n5A">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kxu-rg-n5A" id="MyN-F0-L45">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uqJ-Sq-zz9" id="wrA-Zj-0oU"/>
+                            <outlet property="delegate" destination="uqJ-Sq-zz9" id="avA-pM-JrL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Xbc-g2-Jpf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldg-Ek-4EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_favorite_white" width="24" height="24"/>
+        <image name="ic_settings_bluetooth_white" width="24" height="24"/>
+    </resources>
+    <color key="tintColor" red="1" green="0.35285942106200852" blue="0.33187329584039094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
