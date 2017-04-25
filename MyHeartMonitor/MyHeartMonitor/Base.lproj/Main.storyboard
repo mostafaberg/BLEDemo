@@ -65,35 +65,6 @@
             </objects>
             <point key="canvasLocation" x="-1651" y="-123"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="UWQ-d3-QKd">
-            <objects>
-                <tableViewController id="uqJ-Sq-zz9" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CRh-Xt-dPK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kxu-rg-n5A">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kxu-rg-n5A" id="MyN-F0-L45">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="uqJ-Sq-zz9" id="wrA-Zj-0oU"/>
-                            <outlet property="delegate" destination="uqJ-Sq-zz9" id="avA-pM-JrL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Xbc-g2-Jpf"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ldg-Ek-4EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="264" y="115"/>
-        </scene>
     </scenes>
     <resources>
         <image name="ic_favorite_white" width="24" height="24"/>
